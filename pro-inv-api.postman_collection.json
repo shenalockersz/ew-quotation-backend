@@ -1,0 +1,146 @@
+{
+  "info": {
+    "name": "Pro Inv API v1",
+    "_postman_id": "e9d3b2e7-5c49-4d3f-9d8b-9a3425b6a111",
+    "description": "Collection for testing Pro Inv API v1 endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "API - Hello",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/v1/api/hello",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "api", "hello"]
+        }
+      }
+    },
+    {
+      "name": "API - Health",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/v1/api/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "api", "health"]
+        }
+      }
+    },
+    {
+      "name": "API - Company",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/v1/api/company",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "api", "company"]
+        }
+      }
+    },
+    {
+      "name": "API - Login",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"username\": \"testuser\",\n    \"password\": \"testpass\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/v1/api/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "api", "login"]
+        }
+      }
+    },
+    {
+      "name": "Customers - List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/v1/customers?cp_code=CP001",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "customers"],
+          "query": [{ "key": "cp_code", "value": "CP001" }]
+        }
+      }
+    },
+    {
+      "name": "Customers - Insert",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customerInfo\": {\n    \"customerName\": \"Test Customer\",\n    \"customerAddress\": \"123 Test St\",\n    \"vatNo\": \"VAT123\",\n    \"contactPerson\": \"John Doe\",\n    \"contactPersonNumber\": \"0712345678\",\n    \"customerDetails\": \"Notes here\"\n  },\n  \"createdby\": \"CP001\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:3001/v1/customers",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "customers"]
+        }
+      }
+    },
+    {
+      "name": "Items - List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/v1/items",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "items"]
+        }
+      }
+    },
+    {
+      "name": "Quotations - Weekly Count",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/v1/quotations/weekly-count",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "quotations", "weekly-count"]
+        }
+      }
+    },
+    {
+      "name": "Quotations - List",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3001/v1/quotations?cp_code=CP001",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3001",
+          "path": ["v1", "quotations"],
+          "query": [{ "key": "cp_code", "value": "CP001" }]
+        }
+      }
+    }
+  ]
+}
